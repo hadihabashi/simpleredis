@@ -1,12 +1,13 @@
 Simple Redis
 ============
 
-[![Build Status](https://travis-ci.org/xyproto/simpleredis.svg?branch=master)](https://travis-ci.org/xyproto/simpleredis)
+
+[![Build Status](https://travis-ci.org/hadihabashi/sredis.svg?branch=master)](https://travis-ci.org/hadihabashi/sredis)
 [![GoDoc](https://godoc.org/github.com/xyproto/simpleredis?status.svg)](http://godoc.org/github.com/xyproto/simpleredis)
 
 
-Easy way to use Redis from Go.
-
+A Few Change in Simple Redis Project By  xyproto
+https://github.com/xyproto/simpleredis
 
 Online API Documentation
 ------------------------

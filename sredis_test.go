@@ -1,7 +1,6 @@
 package sredis
 
 import (
-	"github.com/xyproto/pinterface"
 	"log"
 	"strings"
 	"testing"
@@ -50,7 +49,7 @@ func TestList(t *testing.T) {
 	list := NewList(pool, listname)
 
 	// Check that the list qualifies for the IList interface
-	var _ pinterface.IList = list
+	var _ .IList = list
 
 	list.SelectDatabase(1)
 	if err := list.Add(testdata); err != nil {
@@ -82,7 +81,7 @@ func TestRemove(t *testing.T) {
 
 	// TODO: Also do this check for ISet and IHashMap
 	// Check that the key/value qualifies for the IKeyValue interface
-	var _ pinterface.IKeyValue = kv
+	var _ IKeyValue = kv
 
 	kv.SelectDatabase(1)
 	if err := kv.Set(testkey, testvalue); err != nil {
@@ -154,7 +153,7 @@ func TestTwoFields(t *testing.T) {
 
 func TestICreator(t *testing.T) {
 	// Check if the struct comforms to ICreator
-	var _ pinterface.ICreator = NewCreator(pool, 1)
+	var _ ICreator = NewCreator(pool, 1)
 }
 
 func TestKeyValue(t *testing.T) {
@@ -167,7 +166,7 @@ func TestKeyValue(t *testing.T) {
 	kv := NewKeyValue(pool, kvname)
 
 	// Check that the list qualifies for the IList interface
-	var _ pinterface.IKeyValue = kv
+	var _ IKeyValue = kv
 
 	kv.SelectDatabase(1)
 
@@ -206,7 +205,7 @@ func TestExpire(t *testing.T) {
 	kv := NewKeyValue(pool, kvname)
 
 	// Check that the list qualifies for the IList interface
-	var _ pinterface.IKeyValue = kv
+	var _ IKeyValue = kv
 
 	kv.SelectDatabase(1)
 
@@ -248,7 +247,7 @@ func TestExpireHashMapKey(t *testing.T) {
 	hm := NewHashMap(pool, hname)
 
 	// Check that the list qualifies for the IList interface
-	var _ pinterface.IHashMap = hm
+	var _ .IHashMap = hm
 
 	hm.SelectDatabase(1)
 

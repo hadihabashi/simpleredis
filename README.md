@@ -89,10 +89,4 @@ Timeout issues
 
 If there are timeout issues when connecting to Redis, try consulting the Redis latency doctor on the server by running `redis-cli` and then `latency doctor`.
 
-Version, license and author
----------------------------
-
-* Version: 2.3
-* License: MIT
-* Author: Alexander F Rødseth
 
